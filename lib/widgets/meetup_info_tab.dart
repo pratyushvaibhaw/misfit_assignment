@@ -19,7 +19,7 @@ class MeetupInfoTab extends StatelessWidget {
       width: width,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: AppColor.grey.withOpacity(.12),
+        color: AppColor.grey.withOpacity(.09),
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Column(

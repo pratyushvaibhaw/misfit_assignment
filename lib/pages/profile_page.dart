@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:misfit_assignment/constants/colors.dart';
+import 'package:misfit_assignment/widgets/active_club_tab.dart';
 import 'package:misfit_assignment/widgets/custom_badge.dart';
 import 'package:misfit_assignment/widgets/date_info_tab.dart';
+import 'package:misfit_assignment/widgets/divider_and_text.dart';
 import 'package:misfit_assignment/widgets/meetup_info_tab.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -46,8 +48,26 @@ class ProfilePage extends StatelessWidget {
               20.heightBox,
               //activities section
               meetAndActiveTabs(height),
+              20.heightBox,
               //active clubs tabs
-              
+              const DividerAndText(txt: 'Their Active Clubs '),
+              20.heightBox,
+              ActiveClubTab(
+                  h: height,
+                  img: '${Utils.img}club.jpg',
+                  title: 'Poets without borders',
+                  location: 'Sec 30, Gurugram',
+                  meetups: '😊 12',
+                  date: 'Jun 24'),
+              25.heightBox,
+              ActiveClubTab(
+                  h: height,
+                  img: '${Utils.img}meet.png',
+                  title: 'All things pop culture',
+                  location: 'Sec 30, Gurugram',
+                  meetups: '🤩 1',
+                  date: 'Jun 24'),
+              5.heightBox,
             ],
           ),
         ),
@@ -57,19 +77,19 @@ class ProfilePage extends StatelessWidget {
 
   Row meetAndActiveTabs(double height) {
     return Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                MeetupInfoTab(
-                  meetups: '😊 2',
-                  width: height * .200,
-                ),
-                15.widthBox,
-                DateInfoTab(
-                  activeDate: '24 Jun',
-                  width: height * .200,
-                )
-              ],
-            );
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        MeetupInfoTab(
+          meetups: '😊 2',
+          width: height * .200,
+        ),
+        15.widthBox,
+        DateInfoTab(
+          activeDate: '24 Jun',
+          width: height * .200,
+        )
+      ],
+    );
   }
 
   Text personalBio(String str) {

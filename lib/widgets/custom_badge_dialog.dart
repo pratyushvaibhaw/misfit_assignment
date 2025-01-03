@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:misfit_assignment/constants/colors.dart';
 import 'package:misfit_assignment/utils/utils.dart';
+import 'package:misfit_assignment/widgets/divider_and_text.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CustomBadgeDialog extends StatelessWidget {
@@ -53,26 +54,7 @@ class CustomBadgeDialog extends StatelessWidget {
               ),
             ),
             12.heightBox,
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    height: 1.0,
-                    color: AppColor.grey,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Utils.text(str: badgeInfo),
-                ),
-                Expanded(
-                  child: Container(
-                    height: 1.0,
-                    color: AppColor.grey,
-                  ),
-                ),
-              ],
-            ),
+            DividerAndText(txt: badgeInfo),
             12.heightBox,
             Text(
               description,
