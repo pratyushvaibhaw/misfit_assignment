@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constants/colors.dart';
 import '../utils/utils.dart';
 
@@ -19,7 +18,7 @@ class DividerAndText extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Utils.text(str: txt),
+          child: Utils.text(str: txt, size: 25),
         ),
         Expanded(
           child: Container(

@@ -51,7 +51,7 @@ class ActiveClubTab extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(22),
                     child: Image.asset(
-                      '${Utils.img}club.jpg',
+                      img,
                       height: 150,
                       width: 160,
                       fit: BoxFit.cover,
@@ -86,7 +86,7 @@ class ActiveClubTab extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Poets without borders",
+                        title,
                         style: GoogleFonts.aBeeZee().copyWith(
                             fontSize: h * .025,
                             color: AppColor.black,
@@ -124,8 +124,8 @@ class ActiveClubTab extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              MeetupInfoTab(meetups: meetups, width: h * .190),
-              DateInfoTab(activeDate: date, width: h * .190)
+              MeetupInfoTab(meetups: meetups, width: h * .190, h: h),
+              DateInfoTab(activeDate: date, width: h * .190, h: h)
             ],
           )
         ],

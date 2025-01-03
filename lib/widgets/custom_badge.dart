@@ -37,7 +37,7 @@ class CustomBadge extends StatelessWidget {
           ),
         ),
         5.heightBox,
-        Utils.text(str: title, size: 20),
+        Utils.text(str: title, size: 18),
       ],
     ).onTap(() {
       showGeneralDialog(

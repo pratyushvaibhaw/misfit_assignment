@@ -82,11 +82,13 @@ class ProfilePage extends StatelessWidget {
         MeetupInfoTab(
           meetups: '😊 2',
           width: height * .200,
+          h: height,
         ),
         15.widthBox,
         DateInfoTab(
           activeDate: '24 Jun',
           width: height * .200,
+          h: height,
         )
       ],
     );
@@ -96,8 +98,8 @@ class ProfilePage extends StatelessWidget {
     return Text(
       str,
       style: const TextStyle(
-        fontWeight: FontWeight.w400,
-        fontSize: 17,
+        fontWeight: FontWeight.w500,
+        fontSize: 18,
       ),
       textAlign: TextAlign.center,
     );

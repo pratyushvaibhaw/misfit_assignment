@@ -6,11 +6,13 @@ import 'package:velocity_x/velocity_x.dart';
 class MeetupInfoTab extends StatelessWidget {
   final String meetups;
   final double width;
+  final double h;
 
   const MeetupInfoTab({
     super.key,
     required this.meetups,
     required this.width,
+    required this.h,
   });
 
   @override
@@ -27,11 +29,11 @@ class MeetupInfoTab extends StatelessWidget {
         children: [
           Utils.text(
               str: 'Meet-ups attended',
-              size: 20,
-              weight: FontWeight.w500,
+              size: h * .018,
+              weight: FontWeight.w400,
               color: AppColor.grey),
           10.heightBox,
-          Utils.text(str: meetups, size: 22),
+          Utils.text(str: meetups, size: h * .024),
         ],
       ),
     );

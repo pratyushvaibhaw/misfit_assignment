@@ -7,7 +7,12 @@ import '../utils/utils.dart';
 class DateInfoTab extends StatelessWidget {
   final String activeDate;
   final double width;
-  const DateInfoTab({super.key, required this.activeDate, required this.width});
+  final double h;
+  const DateInfoTab(
+      {super.key,
+      required this.activeDate,
+      required this.width,
+      required this.h});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +27,8 @@ class DateInfoTab extends StatelessWidget {
         children: [
           Utils.text(
               str: 'Active since',
-              size: 20,
-              weight: FontWeight.w500,
+              size: h * .019,
+              weight: FontWeight.w400,
               color: AppColor.grey),
           10.heightBox,
           Row(
@@ -33,8 +38,8 @@ class DateInfoTab extends StatelessWidget {
                 '${Utils.img}calendar.png',
                 height: 28,
               ),
-              5.widthBox,
-              Utils.text(str: activeDate, size: 22),
+              8.widthBox,
+              Utils.text(str: activeDate, size: 25),
             ],
           ),
         ],
